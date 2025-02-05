@@ -30,12 +30,10 @@ public class TurmaService {
     }
 
     public Turma cadastrarTurma(Turma turma) {
-        // Valida se a disciplina existe
         if (!disciplinaService.buscarDisciplinaPorId(turma.getDisciplina().getId()).isPresent()) {
             throw new RuntimeException("Disciplina não encontrada!");
         }
 
-        // Valida se o semestre existe
         if (!semestreService.buscarSemestrePorId(turma.getSemestre().getId()).isPresent()) {
             throw new RuntimeException("Semestre não encontrado!");
         }

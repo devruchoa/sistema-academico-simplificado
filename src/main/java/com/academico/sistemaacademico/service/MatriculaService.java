@@ -25,6 +25,10 @@ public class MatriculaService {
         return matriculaRepository.findAll();
     }
 
+    public List<Matricula> listarMatriculasPorTurma(Long turmaId) {
+        return matriculaRepository.findByTurmaId(turmaId);
+    }
+
     public Optional<Matricula> buscarMatriculaPorId(Long id) {
         return matriculaRepository.findById(id);
     }
