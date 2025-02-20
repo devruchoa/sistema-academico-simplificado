@@ -26,11 +26,9 @@ public class Disciplina {
     @NotNull(message = "A carga horária é obrigatória")
     private Integer cargaHoraria;
 
-    // Construtor padrão
     public Disciplina() {
     }
 
-    // Construtor com todos os atributos
     public Disciplina(Long id, String nome, String codigo, String ementa, Integer cargaHoraria) {
         this.id = id;
         this.nome = nome;
@@ -39,7 +37,6 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -80,7 +77,6 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
     }
 
-    // toString
     @Override
     public String toString() {
         return "Disciplina{" +
@@ -92,7 +88,6 @@ public class Disciplina {
                 '}';
     }
 
-    // equals e hashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
